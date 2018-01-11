@@ -81,7 +81,7 @@ def is_drunk_home(drunk, drunkworld):
 #Creates a drunk list with pub starting coordinates and house number, loop for all 25 drunks applying move if crieria not met, then for each move adds a value of 1 to denityworld
 
 for drunk_num in range (num_drunks):
-    drunk = [pub_coords[0], pub_coords[1], drunk_num * 10 + 10]
+    drunk = [pub_coords[0], pub_coords[1], drunk_num * 10 + 10] # a drunk is a list of three values -  x, y coordinates, house number   
     while not is_drunk_home(drunk, drunkworld):
         move_drunk(drunk)
         densityworld[drunk[0]][drunk[1]] += 1 # add a value of 1 to each cell in density world every time a drunk goes though it
